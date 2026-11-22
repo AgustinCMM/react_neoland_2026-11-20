@@ -1,10 +1,11 @@
 import { Navbar } from "./components/Navbar";
+import { Hero } from "./components/Hero";
 
 function App() {
   return (
     <>
       <Navbar />
-      <h1 className="text-primary text-center">Mi landing</h1>
+      <Hero titulo="El mejor café de la ciudad" subtitulo="Tostado aquí, cada mañana" textoBoton="Ver carta" />
     </>
   );
 }
