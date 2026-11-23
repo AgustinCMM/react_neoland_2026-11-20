@@ -2,7 +2,11 @@ import { useState } from "react";
 import { obtenerProductos } from "../services/datos.service";
 import { TarjetaProducto } from "./TarjetaProducto";
 
-export function ListaProductos() {
+interface ListaProductosProps {
+  onLike: () => void;
+}
+
+export function ListaProductos({ onLike }: ListaProductosProps) {
   const [soloDestacados, setSoloDestacados] = useState(false);
   const productos = obtenerProductos();
 
@@ -23,7 +27,7 @@ export function ListaProductos() {
 
       <div className="row g-3">
         {visibles.map((p) => (
-          <TarjetaProducto key={p.id} producto={p} />
+          <TarjetaProducto key={p.id} producto={p} onLike={onLike} />
         ))}
       </div>
     </section>
