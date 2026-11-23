@@ -7,7 +7,7 @@ export function Inicio() {
 
   return (
     <>
-      <Hero titulo="El mejor café de la ciudad" subtitulo="Tostado aquí, cada mañana" />
+      <Hero titulo="El mejor café de la ciudad" subtitulo="Tostado aquí, cada mañana" textoBoton="Contactanos" />
       <ListaProductos onLike={sumarLike} />
     </>
   );
